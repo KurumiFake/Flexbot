@@ -5,8 +5,8 @@ exports.run = async (client, message, args) => {
 const host = message.content.split (" ")[1]
 const port = message.content.split (" ")[2]
 const protocol = message.content.split (" ")[3]
-const ayarlar = require('../ayarlar.json');
-var room = ayarlar.commandroom;
+const config = require('../config.json');
+var room = config.commandroom;
 const roleName = message.member.roles.cache.find(r => r.name === "[ᴀᴛᴛᴀᴄᴋ-ʙᴀsɪᴄ]")
 
 

@@ -8,7 +8,7 @@ module.exports = async member => {
   
   
    let client = member.client;
-  const ayarlar = client.ayarlar
+  const config = client.config
   
   //if (!client.users.get(client.user.id).hasPermission("SEND_MESSAGES")) return message.reply(`Yeterli izinlere sahip değilim! \n**İhtiyacım Olan Yetki:** \n\`Mesaj Gönder\``)
   
@@ -21,7 +21,7 @@ if (db.has(`prefix_${member.guild.id}`) === true) {
 }
   
 if (db.has(`prefix_${member.guild.id}`) === false) {
-  prefix = client.ayarlar.prefix
+  prefix = client.config.prefix
 }
   
   

@@ -2,8 +2,8 @@ const https = require('https');
 const fs = require('fs');
 const Discord = require("discord.js");
 const moment = require('moment');
-const ayarlar = require('../ayarlar.json');
-var room = ayarlar.commandroom;
+const config = require('../config.json');
+var room = config.commandroom;
 
 module.exports.run = async (bot, message, args) => {
 	if (message.channel.id != room) {

@@ -3,12 +3,12 @@ const { Client } = require('discord.js');
 const client = new Discord.Client();
 const chalk = require('chalk');
 const fs = require('fs');
-const ayarlar = require('./ayarlar.json');
+const config = require('./config.json');
 const moment = require('moment')
 require('./util/eventLoader')(client);
 
 var colors = require('colors');
-var prefix = ayarlar.prefix;
+var prefix = config.prefix;
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -100,7 +100,7 @@ client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (message.author.id === ayarlar.sahip) permlvl = 4;
+//  if (message.author.id === config.sahip) permlvl = 4;
   return permlvl;
 };
 
