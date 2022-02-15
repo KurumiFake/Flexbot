@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const { Client } = require('discord.js');
 const client = new Discord.Client();
 const chalk = require('chalk');
@@ -105,17 +105,7 @@ client.elevation = message => {
 };
 
 client.on('ready', message => {
-	
-
-
-console.log('██████╗░░█████╗░████████╗░░██╗██████╗░'.red);
-console.log('██╔══██╗██╔══██╗╚══██╔══╝░██╔╝╚════██╗'.red);
-console.log('██████╦╝██║░░██║░░░██║░░░██╔╝░░█████╔╝'.red);
-console.log('██╔══██╗██║░░██║░░░██║░░░╚██╗░░╚═══██╗'.red);
-console.log('██████╦╝╚█████╔╝░░░██║░░░░╚██╗██████╔╝'.red);
-console.log('╚═════╝░░╚════╝░░░░╚═╝░░░░░╚═╝╚═════╝░'.red);
-
-	
+console.log('started');
 })
 
 client.once('ready', () => {
@@ -124,9 +114,9 @@ client.once('ready', () => {
     client.user.setPresence({
         status: 'available',
         activity: {
-            name: 'ĐỨC ĐẸP TRAI',
+            name: 'amogus',
             type: 'WATCHING',
-            url: 'https://discord.com'
+            url: ''
         }
     });
 });
@@ -144,4 +134,4 @@ client.on('error', e => {
   console.log(chalk.b.red(e.replace(regToken, 'that was.redacted')));
 });
 
-client.login("OTI1MjU1NzExMzU1Njk5MjEw.YcqdiA.B9UOKlFeAqC0E9ZAH4SpEHDS7LE");
+client.login("the discord token of the bot here");
